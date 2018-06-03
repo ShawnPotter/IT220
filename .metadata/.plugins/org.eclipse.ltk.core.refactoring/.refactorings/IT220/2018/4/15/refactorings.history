@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;war_and_peace.txt&apos; to &apos;data2&apos;&#x0D;&#x0A;- Original project: &apos;IT220&apos;&#x0D;&#x0A;- Destination element: &apos;data2&apos;&#x0D;&#x0A;- Original element: &apos;war_and_peace.txt&apos;" description="Copy file" element1="Data/war_and_peace.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1523221458165" target="/IT220/Data/data2" units="0" version="1.0"/>
-</session>
