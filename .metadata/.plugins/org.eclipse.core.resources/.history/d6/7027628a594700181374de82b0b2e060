@@ -1,0 +1,17 @@
+package studenttracker;
+
+public class ForeignStudent extends UnderGrad {
+	private String visa ="";
+	private String originCountry="";
+
+	public ForeignStudent(int id, String fName, String lName, String major, String degreeType,String visa,String originCountry) {
+		super(id, fName, lName, major, degreeType);
+		this.visa=visa;
+		this.originCountry=originCountry;
+	}
+
+	@Override
+	public String toString() {
+		return "ForeignStudent [visa=" + visa + ", originCountry=" + originCountry + "]";
+	}
+}

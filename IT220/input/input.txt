@@ -1,0 +1,2 @@
+Sally 100 true
+Paul 2000 false

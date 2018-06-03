@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 19 resources" deleteContents="false" description="Delete 19 resources" element1="/ArrayListCode.zip_expanded" element10="/PairProgramInterface" element11="/Recursion" element12="/StackQueues" element13="/syntaxchecker.zip_expanded" element14="/Testing Space" element15="/Week 8" element16="/Week2" element17="/Week4InterfacesAbstract" element18="/Week6" element19="/WordLadderConsole" element2="/ArrayListExample" element3="/ArrayListExampleCompleted.zip_expanded" element4="/Assignment3HTMLValidator" element5="/Assignment3HTMLValidator.zip_expanded" element6="/FileIOPairProgram.zip_expanded" element7="/FileIOProject" element8="/IT220" element9="/Mining Calculator" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="19" stamp="1527727863645"/>
+</session>
