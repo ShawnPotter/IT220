@@ -1,0 +1,20 @@
+package studenttracker;
+
+public class USStudent extends UnderGrad {
+	private String ssn = "";
+	public USStudent(int id, String fName, String lName, String major, 
+			String degreeType, String ssn) {
+		super(id, fName, lName, major, degreeType);
+		this.ssn=ssn;
+	}
+	@Override
+	public String toString() {
+		return "USStudent [ssn=" + ssn + "]";
+	}
+	
+	
+
+	
+
+
+}

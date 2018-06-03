@@ -1,0 +1,11 @@
+package examples;
+
+public class FileIOTakeTwo {
+
+	public static void main(String[] args) {
+		//open a file and read the contents
+		
+
+	}
+
+}
