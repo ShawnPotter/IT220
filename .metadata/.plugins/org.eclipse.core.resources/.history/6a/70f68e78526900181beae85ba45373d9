@@ -1,0 +1,98 @@
+package wordladder;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class WordLadder {
+	
+	//Initial Variables
+	private List<String> words = new ArrayList<String>();
+	private List<String> ladder = new ArrayList<String>();
+	private int steps;
+	
+	// default constructor
+	public WordLadder() {
+		// TODO Auto-generated constructor stub
+	}
+	// constructor
+	public WordLadder(String source) {	
+		try(Scanner fileIn = new Scanner(new File(source))){
+			while(fileIn.hasNextLine()) {
+				words.add(fileIn.nextLine());
+			}
+		}catch(FileNotFoundException e){
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	// public method for recursive
+	public boolean findLadder(String startWord, String endWord) {
+		ladder.clear();
+		steps = 0;
+		fLadder(startWord, endWord);
+		return false;
+	}
+	// private method for recursive
+	private boolean fLadder(String currentWord, String endWord) {
+		if(currentWord.equalsIgnoreCase(endWord)) {
+			printList(ladder);
+			System.out.println("Number of steps to complete: " + steps);
+			return true;
+		} else if (currentWord.equals(words.get(words.size()-1))){
+			System.out.println("There is no word ladder");
+		} else if (oneDiff(currentWord, endWord)){
+			//check if there is only a single difference between the starting word and ending word
+			steps = steps+1;
+			currentWord = endWord;
+			ladder.add(endWord);
+			fLadder(currentWord, endWord);
+			return true;
+		}else {
+			// run through the dictionary
+			for(Iterator<String> it = words.iterator(); it.hasNext();) {
+				// if there is one char difference between current word and a word
+				// in the dictionary and the word is not already contained in the ladder
+				if(!(it.hasNext())) {
+					System.out.println("There is no word ladder");
+				}
+				if(oneDiff(currentWord, it.next()) && !(ladder.contains(it.next()))) {
+					steps = steps + 1;
+					ladder.add(it.next());
+					fLadder(it.next(), endWord);
+				
+				}
+			}
+		}
+		return false;	
+	}
+	// prints out the list
+	public void printList(List<String> list) {
+		System.out.println(list);
+	}
+	public boolean inList(String word, List<String> list) {
+		if(list.contains(word))
+			return true;
+		else
+			return false;
+	}
+	
+	// determines if there is a one character different between one word or another
+	public static boolean oneDiff(String word1, String word2) {
+		int diff = 0;
+		int wordLength = word2.length();
+		if(word1.length()==word2.length()) {
+			for(int i = 0; i < wordLength; i++) {
+				if(word1.charAt(i)!=word2.charAt(i)) {
+					diff += 1;
+				}
+			}
+		}
+		if(word1.length() == word2.length() && diff==1) {
+			return true;
+		}
+		return false;
+	}
+}
